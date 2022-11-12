@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "gatsby";
-import {rnService} from "./homepage.module.css"
+import {rnService,description,retailWrapper,sectionTitle} from "./homepage.module.css"
 
 
 const Retail = (props) => {
     return(
-        <section className="reatil-wrapper">
+        <section className={`${retailWrapper} p-5`}>
             <div className="rn-service-area rn-section-gap section-separator">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
-                        <div className="section-title text-left aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true">
+                        <div className={sectionTitle}>
                             <h2 className="title">Retail, E-Commerce und Dienstleister</h2>
                         </div>
                     </div>
@@ -26,9 +26,9 @@ const Retail = (props) => {
                                 </div>
                                 <div className="content">
                                     <h4 className="title"><Link>{props.title}</Link></h4>
-                                    <p className="description">I throw myself down among the tall grass by the stream as I
+                                    <p className={description}>I throw myself down among the tall grass by the stream as I
                                         lie close to the earth.</p>
-                                    <Link className="read-more-button" href="#"><i className="feather-arrow-right"></i></Link>
+                                    <Link className="read-more-button" href="#"><i className=""></i></Link>
                                 </div>
                             </div>
                             <Link className="over-link" href="#"></Link>
@@ -44,7 +44,7 @@ const Retail = (props) => {
                                 </div>
                                 <div className="content">
                                     <h4 className="title"><Link>App Development</Link></h4>
-                                    <p className="description"> It uses a dictionary of over 200 Latin words, combined with
+                                    <p className={description}> It uses a dictionary of over 200 Latin words, combined with
                                         a handful of model sentence.</p>
                                     <Link className="read-more-button" href="#"><i className="feather-arrow-right"></i></Link>
                                 </div>
@@ -62,7 +62,7 @@ const Retail = (props) => {
                                 </div>
                                 <div className="content">
                                     <h4 className="title"><Link>App Development</Link></h4>
-                                    <p className="description">I throw myself down among the tall grass by the stream as I
+                                    <p className={description}>I throw myself down among the tall grass by the stream as I
                                         lie close to the earth.</p>
                                     <Link className="read-more-button" href="#"><i className="feather-arrow-right"></i></Link>
                                 </div>
@@ -80,7 +80,7 @@ const Retail = (props) => {
                                 </div>
                                 <div className="content">
                                     <h4 className="title"><Link>Mobile App</Link></h4>
-                                    <p className="description">There are many variations of passages of Lorem Ipsum
+                                    <p className={description}>There are many variations of passages of Lorem Ipsum
                                         available, but the majority.
                                     </p>
                                     <Link className="read-more-button" href="#"><i className="feather-arrow-right"></i></Link>
