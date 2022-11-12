@@ -15,20 +15,22 @@
 }
 .primary-btn:hover{
     transform: translateY(-3px);
-    color: #fff;
+    color: #fff !important;
     background: var(--browndark);
 }
 /* .logo-img {
     filter: invert(1);
 } */
-.header-wrapper{
-    padding: 20px 64px;
-    background: #ffffff29;
-    position: absolute;
+header {
+    position: fixed;
     top: 0;
-    right: 0;
-    left: 0;
-}
+    transition: box-shadow .3s ease;
+    width: 100%;
+  
+    &[data-active='true'] {
+      box-shadow: 0 2px 8px rgba(152,168,188,.2);
+    }
+  }
 .header-wrapper a{
     color: #fff;
 }

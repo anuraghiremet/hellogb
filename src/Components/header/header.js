@@ -1,13 +1,32 @@
-import * as React from "react"
+import React, { useState, useEffect} from 'react';
 import { Link } from "gatsby"
 import { StaticImage} from "gatsby-plugin-image"
 import {primaryBtn,logoImg,headerWrapper} from './header.module.css'
 
-const Header = () => {
-    
 
-    return (
-        <header className={headerWrapper}>
+const Header = () => {
+  // determined if page has scrolled and if the view is on mobile
+  const [scrolled, setScrolled] = useState(false);
+
+  // change state on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 100;
+      if (isScrolled !== scrolled) {
+        setScrolled(!scrolled);
+      }
+    };
+
+    document.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      // clean up the event handler when the component unmounts
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
+
+  return (
+      <header data-active={scrolled} className={headerWrapper}>
             
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
@@ -59,13 +78,13 @@ const Header = () => {
                                     <li><Link className="dropdown-item text-dark" href="#">Something else here</Link></li>
                                 </ul>
                             </li>
-                            <Link className={primaryBtn} to="https://rainbowit.net/html/inbio/index-white-version.html">Kontakt</Link>
+                            <Link className={primaryBtn} to=" https://google.com">Kontakt</Link>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-    )
-}
+  );
+};
 
-export default Header
+export default Header;
