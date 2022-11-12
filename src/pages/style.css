@@ -1,0 +1,7 @@
+body{
+    background-color: #ECF0F3;
+}
+:root {
+    --gradientbg: linear-gradient(145deg, #e2e8ec, #ffffff);
+    --boxshadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+}

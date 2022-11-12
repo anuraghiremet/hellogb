@@ -1,0 +1,26 @@
+.custom-navbar {
+    height: 80px;
+    z-index: 9999;
+}
+.nav-link{
+    font-size: 12px;
+}
+.dropdown-item{
+    font-size: 12px;
+}
+.ddbtn{
+    font-size: 13px;
+}
+.btn-red{
+    color: #fff;
+    background-color: #c40000;
+    border-color: #c40000;
+    border-radius: 5px;
+}
+.logo-img {
+    filter: invert(1);
+}
+.header-wrapper{
+    padding: 20px 64px;
+    /* height: 122px; */
+}
