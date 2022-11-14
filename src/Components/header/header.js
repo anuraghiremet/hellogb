@@ -5,51 +5,32 @@ import {primaryBtn,logoImg,headerWrapper} from './header.module.css'
 
 
 const Header = () => {
-  // determined if page has scrolled and if the view is on mobile
-  const [scrolled, setScrolled] = useState(false);
-
-  // change state on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 100;
-      if (isScrolled !== scrolled) {
-        setScrolled(!scrolled);
-      }
-    };
-
-    document.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      // clean up the event handler when the component unmounts
-      document.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrolled]);
 
   return (
-      <header data-active={scrolled} className={headerWrapper}>
+      <header className={headerWrapper}>
             
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="https://www.becoding.de/"><StaticImage src="../../images/logo.png" className={logoImg}/></Link>
+                    <Link className="navbar-brand" to="/"><StaticImage src="../../images/logo.png" className={logoImg}/></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" href="#">Karriere</Link>
+                            <Link className="nav-link mx-2" to='/Karriere'>Karriere</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" href="#">Unternehmen</Link>
+                            <Link className="nav-link mx-2" href="#">Unternehmen</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" href="#">Partner werden</Link>
+                            <Link className="nav-link mx-2" href="#">Partner werden</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" href="#">Marketing</Link>
+                            <Link className="nav-link mx-2" href="#">Marketing</Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link className="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Produkte
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -59,7 +40,7 @@ const Header = () => {
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link className="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Entwicklung
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -69,7 +50,7 @@ const Header = () => {
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link className="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Consulting
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

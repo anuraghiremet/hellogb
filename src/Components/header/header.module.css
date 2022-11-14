@@ -26,10 +26,7 @@ header {
     top: 0;
     transition: box-shadow .3s ease;
     width: 100%;
-  
-    &[data-active='true'] {
-      box-shadow: 0 2px 8px rgba(152,168,188,.2);
-    }
+    padding: 0 64px;
   }
 .header-wrapper a{
     color: #fff;

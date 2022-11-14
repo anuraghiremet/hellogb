@@ -4,7 +4,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import {bottomWrapper,bimgBox,contentBox, bimgOverlay,boverlapImg,primaryBtn,ctitle,cdescription} from "./homepage.module.css"
 
 
-
 const Bottom = () => {
     return(
         <section className={bottomWrapper}>

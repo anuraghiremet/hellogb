@@ -1,0 +1,47 @@
+.top-title {
+    color: white;
+    font-size: 4rem;
+    font-weight: 100;
+}
+.Karriere-head{
+    background: #373737;
+    padding: 100px;
+}
+.card-header{
+    text-align: center;
+    background: var(--gradientbg);
+    display: block;
+    padding: 10px;
+}
+.card-footer{
+    background: var(--gradientbg);
+    min-height: 35px;
+    display: block;
+}
+.card-btn{
+    background: var(--gradientbg);
+    box-shadow: var(--boxshadow);
+    color: var(--browndark);
+    border-radius: 6px;
+    transition: 0.4s;
+    position: relative;
+    padding: 10px 35px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 0 none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.card-btn:hover{
+    color: #fff;
+    background: var(--browndark);
+}
+.card-body{
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+.card{
+    box-shadow: var(--boxshadow);
+    margin-bottom: 25px;
+}

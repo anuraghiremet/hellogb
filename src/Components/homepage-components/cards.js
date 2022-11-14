@@ -1,4 +1,5 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import {cardsWrapper,cimgBox,contentBox,overlapImg,primaryBtn,ctitle,cdescription} from "./homepage.module.css"
@@ -6,6 +7,16 @@ import {cardsWrapper,cimgBox,contentBox,overlapImg,primaryBtn,ctitle,cdescriptio
 
 
 const Cards = () => {
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
+
     return(
         <section className={cardsWrapper}>
            <div className="container">
